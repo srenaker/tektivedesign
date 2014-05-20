@@ -37,8 +37,8 @@ class WelcomeController < ApplicationController
   def get_images(loc)
     arr = []
     Dir.foreach(loc) do |item|
-      next if item == '.' or item == '..'
-      arr << item
+      next if item == '.' or item == '..' or item == 'thumbnails'
+      arr << item 
     end
     return arr
   end
