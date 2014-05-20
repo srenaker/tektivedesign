@@ -10,12 +10,22 @@ class ApplicationController < ActionController::Base
     
     params['image_num'] ? @image_num = params['image_num'] : @image_num = 0
     
-    @image_array = get_images("app/assets/images/#{@image_path}/#{@item}")
-    @thumbnail_array = get_images("app/assets/images/#{@image_path}/#{@item}/thumbnails")
+    @image_array = get_images("app/assets/images/#{@image_path}/#{@item}").sort
+    @thumbnail_array = get_images("app/assets/images/#{@image_path}/#{@item}/thumbnails").sort
     
     @projects = Project.where(:type => type).sort
     @selected_project = Project.where(:_id => @item).first
     @big_image_loc = "#{@image_path}/#{@item}/#{@image_array[@image_num.to_i]}"
     
+  end
+  
+  
+  def get_images(loc)
+    arr = []
+    Dir.foreach(loc) do |item|
+      next if item == '.' or item == '..' or item == 'thumbnails'
+      arr << item 
+    end
+    return arr
   end
 end
