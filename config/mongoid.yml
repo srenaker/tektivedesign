@@ -71,7 +71,7 @@ test:
 production:
     sessions:
         default:
-            uri: <%= ENV['MONGOLAB_URI'] %>
+            uri: "mongodb://heroku_app25434290:svu7pacihdjrsh4df1j8dfl8ai@ds049568.mongolab.com:49568/heroku_app25434290"
             
             options:
                     # The default consistency is :eventual, which reads from
