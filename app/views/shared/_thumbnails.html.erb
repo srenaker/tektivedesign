@@ -1,0 +1,16 @@
+<div class='thumbnails_area'>
+	
+	<% 
+	i = 0
+    thumb_str = ""
+    @thumbnail_array.each do |t| 
+  		i == @image_num.to_i ? classes = "thumbnail selected_thumbnail" : classes = 'thumbnail'
+  		image_link = "#{@image_path}/#{@item}/#{@image_array[i]}"
+		image_src = "#{@image_path}/#{@item}/thumbnails/#{t}"
+	%>
+		<%= link_to("#{@image_path}?item=#{@item}&image_num=#{i}") do %>
+			<%= image_tag image_src, :class => classes %>
+		<% end %>
+		<% i += 1 %>
+  	<% end %>
+</div>

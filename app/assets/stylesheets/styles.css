@@ -1,0 +1,189 @@
+body {
+	background-image: url('grad2.jpg');
+	background-repeat: repeat-x;
+	font-family: "gill sans";
+}
+
+a {
+   	text-decoration: none;
+}
+
+.title a {
+	color: #000;
+}
+
+.links a, .ph_li a {
+	color: #595959;
+	font-size: 1em;
+}
+
+.links a:hover {
+	color: #000;
+}
+
+.lampshade {
+
+}
+
+.outer_container {
+	margin: 20px 40px;
+	height: 780px;
+	width: 1024px;
+	background-color: #FFF;
+}
+
+.links .active_nav_link, .subnav .selected_sub_nav a {
+	color: #c72525;
+}
+
+.side_nav, .about_side_nav {
+	float: left;
+	margin: -10px 20px 0px 35px ;
+}
+
+.about_side_nav {
+	margin-top: 20px;
+}
+
+
+
+.big_image {
+	background-color: #FFF;
+	display: inline;
+	
+}
+
+.ph_big_image {
+	background-color: #FFF;
+	min-height:750px;
+}
+
+.content_img {
+	margin-top: 45px;
+}
+
+.ph_content_img {
+	margin-top: 99px;
+}
+
+.about_content_img {
+	margin-top: 115px;
+}
+
+.links .subnav {
+	font-size: 14px;
+}
+
+.title {
+	font-size: 24px;
+}
+
+.top_nav {
+	line-height: 24px;
+	font-size: 24px;
+	font-weight: 500;
+	margin: 30px 30px 0 30px;
+}
+
+.top_nav .title {
+	font-size: 40px;
+}
+
+.content {
+	width: 1024px;
+	background-color: #FFF;
+	margin: 66px 40px;
+}
+
+ul {
+	list-style-type: none;	
+}
+
+.top_nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+.subnav li{
+	margin-left: -28px;
+}
+
+ul.links {
+	line-height: 23px;
+	font-size: 18px;
+	font-weight: 100;
+	margin-left: -38px;
+}
+
+.top_nav ul.links {
+	line-height: 15px;
+	margin-top: 30px;
+}
+
+ul.ph_ul {
+	margin: -10px 0 0 -25px;
+}
+
+.ph_li {
+	font-weight: 300;
+}
+
+/* DESCRIPTION */
+
+.description {
+	width: 180px;
+}
+
+.ph_description {
+	float:left;
+	margin:92px 15px 0 20px;
+	width:275px;
+}
+
+.about_description {
+	float:left;
+	margin:85px 50px 0 20px;
+	width:412px;
+}
+
+.description_title {
+	margin-top: 30px;
+	margin-bottom:-5px;
+	text-align: right;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.description_text {
+	font-weight: 100;
+	font-size: 14px;
+}
+
+.description_text br {
+	margin-bottom: 20px;
+}
+
+.thumbnails_area {
+	margin: 33px 0 -50 0px;
+}
+
+.thumbnail {
+	display: inline;
+	margin: 20px 5px;
+	border: 2px solid #ccc;
+	cursor: pointer;
+}
+
+.copyright {
+	color: #595959;
+	margin-left: 40px;
+	font-size: .7em;
+}
+.selected_thumbnail {
+	border: 3px solid #c72525;
+}
+
+.footer {
+	background-color: #FFF;	
+	height: 120px;
+}

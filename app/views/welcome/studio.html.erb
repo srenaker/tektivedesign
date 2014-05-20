@@ -1,0 +1,35 @@
+<div class='outer_container'>
+	<div class='side_nav'>
+		<div class='title'>
+			<br>
+			<a href='/'>TEKTIVE<br>
+			DESIGN</a>
+		</div>
+		<ul class='links'>
+			<li><a href='residential' class='nav_link'>Residential</a>
+			<li><a href='passive_house' class='nav_link'>Passive House</a>
+			<li><a href='studio' class='nav_link'>Studio</a>
+				<ul class='subnav'>
+					<% @projects.each do |p| %>
+						<li><%= link_to p.title, "studio?item=#{p._id}" %>
+					
+					<% end %>
+				</ul>
+				
+			<li><a href='workshop' class='nav_link'>Workshop</a>
+			<li><a href='about' class='nav_link'>About</a>						
+		</ul>
+		<div class='description'>
+			<h3 class='description_title'><%= @selected_project.title %></h3>
+			<p class='description_text'>
+				<%= raw CGI.unescapeHTML(@selected_project.description) %>
+				
+			</p>
+		</div>
+	</div>	
+	
+	<%= render "shared/thumbnails" %>
+	
+	<div class='big_image'>	
+		<%= image_tag @big_image_loc, :class => 'content_img' %>			
+	</div>
