@@ -13,7 +13,8 @@
 			<li><a href='workshop' class='nav_link'>Workshop</a>
 				<ul class='subnav'>
 					<% @projects.each do |p| %>
-						<li><%= link_to p.title, "workshop?item=#{p._id}" %>
+						<% p._id == @item ? nav_class = 'selected_sub_nav' : nav_class = 'sub_nav_link' %>
+						<li class = <%= nav_class %> ><%= link_to p.title, "workshop?item=#{p._id}" %>
 					
 					<% end %>
 				</ul>
