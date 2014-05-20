@@ -73,7 +73,7 @@ production:
     default:
       uri: "mongodb://heroku_app25434290:svu7pacihdjrsh4df1j8dfl8ai@ds049568.mongolab.com:49568/heroku_app25434290"
       options:
-        consistency: :strong
+        #consistency: :strong
         max_retries: 30
         retry_interval: 1
         timeout: 15        
